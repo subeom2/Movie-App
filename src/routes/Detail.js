@@ -23,6 +23,7 @@ function Detail() {
         <h1>Loading...</h1>
       ) : (
         <DetailMovie
+          summary={detail.description_full}
           title={detail.title}
           year={detail.year}
           coverImg={detail.medium_cover_image}

@@ -1,6 +1,14 @@
 import PropTypes from "prop-types";
 
-function DetailMovie({ title, year, coverImg, genres, rating, runtime }) {
+function DetailMovie({
+  title,
+  year,
+  coverImg,
+  genres,
+  rating,
+  runtime,
+  summary,
+}) {
   return (
     <div>
       <h1>
@@ -14,6 +22,7 @@ function DetailMovie({ title, year, coverImg, genres, rating, runtime }) {
       </ul>
       <h3>Rating {rating}</h3>
       <h3>Runtime {runtime} minute</h3>
+      <p>{summary}</p>
     </div>
   );
 }
@@ -24,5 +33,6 @@ DetailMovie.prototype = {
   genres: PropTypes.arrayOf(PropTypes.string).isRequired,
   rating: PropTypes.number.isRequired,
   runtime: PropTypes.number.isRequired,
+  summary: PropTypes.string.isRequired,
 };
 export default DetailMovie;
